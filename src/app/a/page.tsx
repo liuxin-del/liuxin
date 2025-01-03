@@ -960,6 +960,7 @@ const Upload = () => {
     return (
         <>
             <h1>大文件上传</h1>
+            <h2>hasjdbasj</h2>
             <input type="file" onChange={handleUpload} />
             {verifyProgress > 0 && !isUploading && (
                 <div className="uploading">
