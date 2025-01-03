@@ -1,0 +1,52 @@
+{
+    "env": {
+        "browser": true, // ⽀持浏览器环境
+        "node": true, // ⽀持 Node.js 环境
+        "es2021": true // 启⽤ ES2021 语法⽀持
+    },
+    "extends": [
+        "eslint:recommended", // 使⽤ ESLint 官⽅推荐规则
+        "plugin:react/recommended", // 如果使⽤ React 的话，可以添加 React 插件
+        "plugin:@typescript-eslint/recommended", // TypeScript ⽀持
+        "plugin:prettier/recommended" // 使⽤ Prettier 格式化代码
+    ],
+    "parser": "@typescript-eslint/parser", // 解析 TypeScript
+    "parserOptions": {
+        "ecmaVersion": 12, // 使⽤ ECMAScript 2021 (ES12)
+        "sourceType": "module" // ⽀持 ES6 模块
+    },
+    "plugins": [
+        "react", // React 插件
+        "@typescript-eslint" // TypeScript 插件
+    ],
+    "rules": {
+        "no-unused-vars": "warn", // 警告未使⽤的变量
+        "no-console": "off", // 允许使⽤ console
+        "react/prop-types": "off", // 如果你不使⽤ PropTypes，可以关闭此规则
+        "semi": [
+            "error",
+            "always"
+        ], // 强制使⽤分号
+        "quotes": [
+            "error",
+            "single"
+        ], // 强制使⽤单引号
+        "@typescript-eslint/explicit-module-boundary-types": "off", // 禁⽤ TypeScript 模块边
+        //界类型要求
+        "indent": [
+            "error",
+            2
+        ], // 强制使⽤两个空格缩进
+        "max-len": [
+            "warn",
+            {
+                "code": 80
+            }
+        ] // ⾏宽限制为 80 字符
+    },
+    "settings": {
+        "react": {
+            "version": "detect" // ⾃动检测 React 版本
+        }
+    }
+}
